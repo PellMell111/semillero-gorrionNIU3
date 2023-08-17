@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Semillero Gorrion</title>
+</head>
+<body>
+  <h1>Bienvenido a Semillero Gorrion</h1>
+  
+  <h2>Lista de Productos:</h2>
+  <ul>
+    {{#each products}}
+      <li>{{this.name}} - Precio: {{this.price}}</li>
+    {{/each}}
+  </ul>
+
+  <h2>Lista de Carritos:</h2>
+  <ul>
+    {{#each carts}}
+        <li>Carrito {{@index + 1}} - Total de unidades: {{this.totalUnits}} - Monto total: {{this.totalAmount}}</li>
+    {{/each}}
+  </ul>
+</body>
+</html>
